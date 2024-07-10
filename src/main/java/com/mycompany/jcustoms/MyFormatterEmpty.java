@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.jcustoms;
 
 import java.awt.Color;
@@ -19,10 +15,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
 
-/**
- *
- * @author kaiqu
- */
 public class MyFormatterEmpty extends JPanel {
 
     private JFormattedTextField campoText;
