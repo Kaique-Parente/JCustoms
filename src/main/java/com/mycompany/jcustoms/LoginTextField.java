@@ -51,9 +51,12 @@ public class LoginTextField extends JTextField {
     private boolean mouseOver = false;
     private String labelText = "Label";
     private Color lineColor = new Color(3, 155, 216);
+    private Color labelColor;
     private Image user;
 
-    public LoginTextField(boolean hasIcon, String url) {
+    public LoginTextField(boolean hasIcon, String url, Color lbColor) {
+        this.labelColor = lbColor;
+        
         setBorder(new EmptyBorder(20, 3, 10, 30));
         setSelectionColor(new Color(76, 204, 255));
         addMouseListener(new MouseAdapter() {
@@ -142,7 +145,7 @@ public class LoginTextField extends JTextField {
 
     private void createHintText(Graphics2D g2) {
         Insets in = getInsets();
-        g2.setColor(new Color(150, 150, 150));
+        g2.setColor(labelColor);
         FontMetrics ft = g2.getFontMetrics();
         Rectangle2D r2 = ft.getStringBounds(labelText, g2);
         double height = getHeight() - in.top - in.bottom;
