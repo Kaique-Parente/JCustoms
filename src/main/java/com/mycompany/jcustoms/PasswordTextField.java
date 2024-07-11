@@ -61,12 +61,15 @@ public class PasswordTextField extends JPasswordField {
     private boolean mouseOver = false;
     private String labelText = "Label";
     private Color lineColor = new Color(3, 155, 216);
+    private Color labelColor;
     private final Image eye;
     private final Image eye_hide;
     private boolean hide = true;
     private boolean showAndHide = true;
 
-    public PasswordTextField(String urlEye, String urlEyeCrossed){
+    public PasswordTextField(String urlEye, String urlEyeCrossed, Color lbColor){
+        this.labelColor = lbColor;
+        
         setBorder(new EmptyBorder(20, 3, 10, 30));
         setSelectionColor(new Color(76, 204, 255));
         addMouseListener(new MouseAdapter() {
@@ -166,7 +169,7 @@ public class PasswordTextField extends JPasswordField {
         if (mouseOver) {
             g2.setColor(lineColor);
         } else {
-            g2.setColor(new Color(150, 150, 150));
+            g2.setColor(labelColor);
         }
         g2.fillRect(2, height - 1, width - 4, 1);
         createHintText(g2);
