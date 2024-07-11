@@ -15,6 +15,6 @@ import javax.swing.JComboBox;
 public class ComboBoxSuggestion<E> extends JComboBox<E> {
 
     public ComboBoxSuggestion() {
-        setUI(new ComboBoxSuggestionUI(new Color(0,0,0)));
+        setUI(new ComboBoxSuggestionUI(new Color(255,255,204), new Color(128,255,189), new Color(0,0,0),new Color(15,154,155)));
     }
 }

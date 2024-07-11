@@ -34,9 +34,15 @@ import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 public class ComboBoxSuggestionUI extends BasicComboBoxUI {
 
     private Color colorBG;
+    private Color colorArrow;
+    private Color colorSelectText;
+    private Color colorBorder;
     
-    public ComboBoxSuggestionUI(Color colorBG) {
+    public ComboBoxSuggestionUI(Color colorBG, Color colorArrow, Color colorBGText, Color colorBorder) {
         this.colorBG = colorBG;
+        this.colorArrow = colorArrow;
+        this.colorSelectText = colorBGText;
+        this.colorBorder = colorBorder;
     }
 
     @Override
@@ -47,12 +53,12 @@ public class ComboBoxSuggestionUI extends BasicComboBoxUI {
         txt.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent fe) {
-                border.setColor(new Color(128, 189, 255));
+                border.setColor(colorBorder);
             }
 
             @Override
             public void focusLost(FocusEvent fe) {
-                border.setColor(new Color(206, 212, 218));
+                border.setColor(colorBorder);
             }
         });
         comboBox.addPopupMenuListener(new PopupMenuListener() {
@@ -63,16 +69,16 @@ public class ComboBoxSuggestionUI extends BasicComboBoxUI {
 
             @Override
             public void popupMenuWillBecomeInvisible(PopupMenuEvent pme) {
-                arrowButton.setBackground(new Color(150, 150, 150));
+                arrowButton.setBackground(colorArrow);
             }
 
             @Override
             public void popupMenuCanceled(PopupMenuEvent pme) {
-                arrowButton.setBackground(new Color(150, 150, 150));
+                arrowButton.setBackground(colorArrow);
             }
         });
         AutoCompleteDecorator.decorate(comboBox);
-        txt.setSelectionColor(new Color(54, 189, 248));
+        txt.setSelectionColor(colorBorder);
         txt.setBorder(new EmptyBorder(0, 4, 0, 4));
         comboBox.setBackground(colorBG);
         comboBox.setBorder(border);
@@ -103,7 +109,7 @@ public class ComboBoxSuggestionUI extends BasicComboBoxUI {
                 }
                 if (bln) {
                     label.setOpaque(true);
-                    label.setBackground(new Color(240, 240, 240));
+                    label.setBackground(colorSelectText);
                     label.setForeground(new Color(17, 155, 215));
                 }
                 return label;
@@ -142,7 +148,7 @@ public class ComboBoxSuggestionUI extends BasicComboBoxUI {
         public ArrowButton() {
             setContentAreaFilled(false);
             setBorder(new EmptyBorder(5, 5, 5, 5));
-            setBackground(new Color(150, 150, 150));
+            setBackground(colorArrow);
         }
 
         @Override
@@ -183,7 +189,7 @@ public class ComboBoxSuggestionUI extends BasicComboBoxUI {
         }
 
         private Color focusColor = new Color(128, 189, 255);
-        private Color color = new Color(206, 212, 218);
+        private Color color = colorSelectText;
 
         public Border(int border) {
             super(border, border, border, border);
@@ -200,7 +206,7 @@ public class ComboBoxSuggestionUI extends BasicComboBoxUI {
             if (cmpnt.isFocusOwner()) {
                 g2.setColor(focusColor);
             } else {
-                g2.setColor(color);
+                g2.setColor(colorBorder);
             }
             g2.drawRect(x, y, width - 1, height - 1);
             g2.dispose();
