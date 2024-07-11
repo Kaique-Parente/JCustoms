@@ -15,6 +15,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
 
+/**
+ * 
+ * @author RAVEN
+ */
+
 public class MyFormatterEmpty extends JPanel {
 
     private JFormattedTextField campoText;

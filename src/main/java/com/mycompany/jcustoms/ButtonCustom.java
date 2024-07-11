@@ -8,6 +8,11 @@ import java.awt.RenderingHints;
 import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
 
+/**
+ * 
+ * @author RAVEN
+ */
+
 public class ButtonCustom extends JButton {
 
     public boolean isOver() {

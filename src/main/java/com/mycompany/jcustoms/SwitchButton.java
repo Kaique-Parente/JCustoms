@@ -17,6 +17,11 @@ import java.util.List;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
+/**
+ * 
+ * @author RAVEN
+ */
+
 public class SwitchButton extends Component {
 
     public boolean isSelected() {

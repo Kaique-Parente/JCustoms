@@ -13,6 +13,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+/**
+ * 
+ * @author RAVEN
+ */
+
 public class SearchClient extends JTextField {
 
     public int getRound() {
