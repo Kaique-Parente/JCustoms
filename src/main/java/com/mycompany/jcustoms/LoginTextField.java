@@ -149,13 +149,13 @@ public class LoginTextField extends JTextField {
         FontMetrics ft = g2.getFontMetrics();
         Rectangle2D r2 = ft.getStringBounds(labelText, g2);
         double height = getHeight() - in.top - in.bottom;
-        double textY = (height - r2.getHeight()) / 2;
+        double textY = (height - r2.getHeight()) / 2; // Aumentar o tamanho do espaço do texto EXM:(30-height)
         double size;
         if (animateHinText) {
             if (show) {
-                size = 18 * (1 - location);
+                size = 18 * (1 - location); //Movimento quando clickamos e o label desce (0.75 - location)
             } else {
-                size = 18 * location;
+                size = 18 * location; //Movimento quando clickamos e o label sobe
             }
         } else {
             size = 18;

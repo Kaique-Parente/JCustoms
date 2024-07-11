@@ -29,6 +29,9 @@ public class Teste extends javax.swing.JFrame {
         buttonCustom1 = new com.mycompany.jcustoms.ButtonCustom();
         switchButton1 = new com.mycompany.jcustoms.SwitchButton();
         textFieldCustom1 = new com.mycompany.jcustoms.TextFieldCustom();
+        buttonCustom2 = new com.mycompany.jcustoms.ButtonCustom();
+        buttonCustom3 = new com.mycompany.jcustoms.ButtonCustom();
+        switchButton2 = new com.mycompany.jcustoms.SwitchButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 51, 51));
@@ -37,17 +40,30 @@ public class Teste extends javax.swing.JFrame {
 
         textFieldCustom1.setText("textFieldCustom1");
 
+        buttonCustom2.setText("buttonCustom2");
+
+        buttonCustom3.setText("buttonCustom3");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(176, 176, 176)
-                .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(134, 134, 134)
-                .addComponent(switchButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83)
-                .addComponent(textFieldCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(176, 176, 176)
+                        .addComponent(buttonCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(134, 134, 134)
+                        .addComponent(switchButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(83, 83, 83)
+                        .addComponent(textFieldCustom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(buttonCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(62, 62, 62)
+                        .addComponent(buttonCustom3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(switchButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(295, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -62,7 +78,13 @@ public class Teste extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addGap(119, 119, 119)
                             .addComponent(switchButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(354, Short.MAX_VALUE))
+                .addGap(74, 74, 74)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(buttonCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonCustom3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(switchButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(255, Short.MAX_VALUE))
         );
 
         pack();
@@ -105,7 +127,10 @@ public class Teste extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.jcustoms.ButtonCustom buttonCustom1;
+    private com.mycompany.jcustoms.ButtonCustom buttonCustom2;
+    private com.mycompany.jcustoms.ButtonCustom buttonCustom3;
     private com.mycompany.jcustoms.SwitchButton switchButton1;
+    private com.mycompany.jcustoms.SwitchButton switchButton2;
     private com.mycompany.jcustoms.TextFieldCustom textFieldCustom1;
     // End of variables declaration//GEN-END:variables
 }
