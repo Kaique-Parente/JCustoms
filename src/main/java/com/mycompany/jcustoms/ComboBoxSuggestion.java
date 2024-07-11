@@ -9,11 +9,12 @@ package com.mycompany.jcustoms;
  * @author RAVEN
  */
 import com.mycompany.jcustoms.comboBox.ComboBoxSuggestionUI;
+import java.awt.Color;
 import javax.swing.JComboBox;
 
 public class ComboBoxSuggestion<E> extends JComboBox<E> {
 
     public ComboBoxSuggestion() {
-        setUI(new ComboBoxSuggestionUI());
+        setUI(new ComboBoxSuggestionUI(new Color(0,0,0)));
     }
 }

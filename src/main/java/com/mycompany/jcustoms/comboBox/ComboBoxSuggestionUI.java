@@ -33,6 +33,12 @@ import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
 public class ComboBoxSuggestionUI extends BasicComboBoxUI {
 
+    private Color colorBG;
+    
+    public ComboBoxSuggestionUI(Color colorBG) {
+        this.colorBG = colorBG;
+    }
+
     @Override
     public void installUI(JComponent jc) {
         super.installUI(jc);
@@ -68,7 +74,7 @@ public class ComboBoxSuggestionUI extends BasicComboBoxUI {
         AutoCompleteDecorator.decorate(comboBox);
         txt.setSelectionColor(new Color(54, 189, 248));
         txt.setBorder(new EmptyBorder(0, 4, 0, 4));
-        comboBox.setBackground(Color.WHITE);
+        comboBox.setBackground(colorBG);
         comboBox.setBorder(border);
     }
 
